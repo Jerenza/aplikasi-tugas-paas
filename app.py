@@ -7,6 +7,8 @@ app = Flask(__name__)
 todos = []
 next_id = 1
 
+database_url = os.environ.get('DATABASE_URL')
+
 @app.route('/')
 def beranda():
     return jsonify({
